@@ -1,0 +1,158 @@
+
+
+@keyframes in_rightBoxFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#right_box {
+    animation-name: in_rightBoxFadeIn;
+    animation-fill-mode: backwards;
+    animation-timing-function:ease-out;
+    animation-delay: 1s;
+    animation-duration: 0.5s;
+}
+
+#project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+}
+#project #project_top_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#project #project_bottom_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#project_nav_list {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+#project_nav_list p {
+    font-size: 1.3em;
+
+    cursor: pointer;
+}
+
+#skills_nav_list {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+#skills_nav_list p {
+    font-size: 1.3em;
+
+    cursor: pointer;
+}
+
+#project h2 {
+    font-size: 4em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#project h4 {
+    font-size: 2em;
+    margin-top: 0px;
+    text-align: center;
+}
+
+#p_item_image {
+    /* background-color: antiquewhite; */
+    /* background-image: url("../img/me2.jpg"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-height: 50%;
+    height: 50%;
+    width: 100%;
+}
+
+#project_bottom_list p {
+    text-align: center;
+    
+    font-size: 2em;
+    padding-left: 20%;
+    padding-right: 20%;
+
+    margin-bottom: 10%;
+}
+
+
+
+
+
+
+
+#education {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+}
+#education h2 {
+    font-size: 4em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#education h4 {
+    font-size: 2em;
+    margin-top: 0px;
+    text-align: center;
+}
+#education p {
+    text-align: center;
+    
+    font-size: 2em;
+    padding-left: 20%;
+    padding-right: 20%;
+
+    margin-bottom: 10%;
+}
+
+
+#skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+}
+#skills h2 {
+    font-size: 4em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#skills h4 {
+    font-size: 2em;
+    margin-top: 0px;
+    text-align: center;
+}
+#skills p {
+    text-align: center;
+    
+    font-size: 2em;
+    padding-left: 20%;
+    padding-right: 20%;
+
+    margin-bottom: 10%;
+}
+
+.tab_inactive {
+    display: none !important;
+}
+.tab_active {
+    /* display: initial !important; */
+}

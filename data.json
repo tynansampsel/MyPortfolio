@@ -1,0 +1,62 @@
+{
+    "education": [
+        {
+            "title": "education 1",
+            "date": "2022 - 2023",
+            "image": "../img/decoration_2.png",
+            "desc": "beep bop cotton eye joe!"
+        },
+        {
+            "title": "experience 2",
+            "date": "2022 - 2023",
+            "image": "../img/decoration_2.png",
+            "desc": "beep bop cotton eye joe!  ee;emrf"
+        },
+        {
+            "title": "education 3",
+            "date": "2022 - 2023",
+            "image": "../img/decoration_2.png",
+            "desc": "beep bop cotton eye joe 4444!"
+        }
+    ],
+    "skills": [
+        {
+            "title": "education 1",
+            "date": "2022 - 2023",
+            "image": "../img/decoration_2.png",
+            "desc": "beep bop cotton eye joe!"
+        },
+        {
+            "title": "experience 2",
+            "date": "2022 - 2023",
+            "image": "../img/decoration_2.png",
+            "desc": "beep bop cotton eye joe!  ee;emrf"
+        },
+        {
+            "title": "education 3",
+            "date": "2022 - 2023",
+            "image": "../img/decoration_2.png",
+            "desc": "beep bop cotton eye joe 4444!"
+        }
+    ],
+    "project": [
+        {
+            "title": "education 1",
+            "date": "2022 - 2023",
+            "image": "../img/decoration_2.png",
+            "desc": "beep bop cotton eye joe!"
+        },
+        {
+            "title": "experience 2",
+            "date": "2022 - 2023",
+            "image": "../img/decoration_2.png",
+            "desc": "beep bop cotton eye joe!  ee;emrf"
+        },
+        {
+            "title": "education 3",
+            "date": "2022 - 2023",
+            "image": "../img/decoration_2.png",
+            "desc": "beep bop cotton eye joe 4444!"
+        }
+    ]
+}
