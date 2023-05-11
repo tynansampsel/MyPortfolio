@@ -4,3 +4,11 @@
 .inactive {
     color: #8A9193;
 }
+
+
+.active:hover {
+    color: #E9E9E9;
+}
+.inactive {
+    color: #8A9193;
+}
