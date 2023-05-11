@@ -12,6 +12,8 @@
         width: 65%;
     }
 
-
+    body {
+        height: 100vh;
+    }
 
 }

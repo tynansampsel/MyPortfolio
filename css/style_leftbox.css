@@ -1,28 +1,23 @@
 #left_box {
-    background-color: #172022;
-}
-#right_box {
-    background-color: #2C3939;
-
-    box-shadow: inset 0px 0px 50px 10px rgba(0, 0, 0, 0.25);
+    background-color: #31393b;
 }
 
 
 #nav_list {
-    background-color: #172022;
+    background-color: #31393b;
     /* background-color: #60b6c9; */
 }
 
 
 #left_box_list h1 {
-    color: #69FF44;
+    color: #a7ed95;
 }
 #left_box_list h3 {
-    color: #6E7374;
+    color: #525c5f;
 }
 #left_box_list p {
-    color: #62685B;
+    color: #c2c8bc;
 }
-#left_box_list img {
+/* #left_box_list img {
     width: 30%;
-}
+} */

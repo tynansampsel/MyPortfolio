@@ -1,16 +1,44 @@
+#right_box {
+    background-color: #f9ffff;
+    /* background-color: #2C3939; */
+
+    box-shadow: inset 0px 0px 50px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+#project_nav_list, #skills_nav_list, #education_nav_list {
+    background-color: #363e40;
+}
+
 #project_top_list h2 {
-    color: #DCDFDC;
+    color: #31393b;
 }
 #project_top_list h4 {
     color: #484E4F;
 }
-#project_bottom_list p {
-    color: #9D9D9D;
+#project_top_list p {
+    color: #b5bab2;
+}
+
+
+#p_item_title {
+    color: #31393b;
+}
+#p_item_date {
+    color: #767d7e;
+}
+#p_item_desc {
+    color: #686e6f;
+}
+
+#project_top_list p:hover {
+    color: #d5d9d2;
 }
 
 #project #item_image {
     background-color: rgb(46, 53, 53);
-    background-image: url("../img/me2.jpg");
+    background-color: rgb(46, 53, 53);
+    /* background-image: url("../img/me2.jpg"); */
     background-size: cover;
     background-repeat: no-repeat;
 }

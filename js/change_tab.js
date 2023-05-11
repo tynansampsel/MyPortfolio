@@ -12,15 +12,19 @@ let button_education_1 = document.getElementById('button_education_1');
 let button_education_2 = document.getElementById('button_education_2');
 let button_education_3 = document.getElementById('button_education_3');
 
+let bi_e_1 = document.getElementById('bi_e_1');
+
 let bi_p_1 = document.getElementById('bi_p_1');
 let bi_p_2 = document.getElementById('bi_p_2');
 let bi_p_3 = document.getElementById('bi_p_3');
+let bi_p_4 = document.getElementById('bi_p_4');
 
 let bi_s_1 = document.getElementById('bi_s_1');
 let bi_s_2 = document.getElementById('bi_s_2');
 let bi_s_3 = document.getElementById('bi_s_3');
 let bi_s_4 = document.getElementById('bi_s_4');
 
+let education_nav_list = document.getElementById('education_nav_list');
 let project_nav_list = document.getElementById('project_nav_list');
 let skills_nav_list = document.getElementById('skills_nav_list');
 
@@ -36,13 +40,32 @@ let currentTab = "education";
 
 button_education.addEventListener('click', async () => {
 
-    turnOn_tab(tab_education);
-    turnOff_tab(tab_project);
+    // turnOn_tab(tab_education);
+    // turnOff_tab(tab_project);
+
+
+    turnOn_tab(tab_project);
+    turnOff_tab(tab_education);
+
     //turnOff_tab(tab_skills);
     console.log("gaaa")
     turnOn_button(button_education);
     turnOff_button(button_projects);
     turnOff_button(button_skills);
+
+    currentTab = "education";console.log("s")
+
+    turnOn_tab(education_nav_list);
+    turnOff_tab(project_nav_list);
+    turnOff_tab(skills_nav_list);
+
+    turnOn_button(bi_e_1);
+    isFirst()
+    let data = jsonData.education[0];
+
+    item_title.innerText = data.title
+    item_desc.innerText = data.desc
+    //item_image.style.backgroundImage = `url("${data.image}")`;
 
     tab_education.scrollIntoView({
         block: 'end',
@@ -65,17 +88,19 @@ button_projects.addEventListener('click', async () => {
 
     turnOn_tab(project_nav_list);
     turnOff_tab(skills_nav_list);
+    turnOff_tab(education_nav_list);
 
     let data = jsonData.project[0];
     console.log(data)
 
     item_title.innerText = data.title
     item_desc.innerText = data.desc
-    item_image.style.backgroundImage = `url("${data.image}")`;
+    //item_image.style.backgroundImage = `url("${data.image}")`;
 
     turnOn_button(bi_p_1);
     turnOff_button(bi_p_2);
     turnOff_button(bi_p_3);
+    turnOff_button(bi_p_4);
     isFirst()
 
     tab_project.scrollIntoView({
@@ -99,13 +124,14 @@ button_skills.addEventListener('click', async () => {
 
     turnOff_tab(project_nav_list);
     turnOn_tab(skills_nav_list);
+    turnOff_tab(education_nav_list);
 
     let data = jsonData.skills[0];
     console.log(data)
 
     item_title.innerText = data.title
     item_desc.innerText = data.desc
-    item_image.style.backgroundImage = `url("${data.image}")`;
+    ///item_image.style.backgroundImage = `url("${data.image}")`;
     //item_image.setAttribute('src', data.image)
 
     turnOn_button(bi_s_1);
@@ -143,7 +169,17 @@ function turnOn_button(element){
 
 
 
+bi_e_1.addEventListener('click', async () => {
+    console.log("bingbong")
+    let data = jsonData.education[0];
+    console.log(data)
 
+    item_title.innerText = data.title
+    item_desc.innerText = data.desc
+    //item_image.style.backgroundImage = `url("${data.image}")`;
+    turnOn_button(bi_e_1);
+    isFirst()
+})
 
 
 bi_p_1.addEventListener('click', async () => {
@@ -153,10 +189,11 @@ bi_p_1.addEventListener('click', async () => {
 
     item_title.innerText = data.title
     item_desc.innerText = data.desc
-    item_image.style.backgroundImage = `url("${data.image}")`;
+    //item_image.style.backgroundImage = `url("${data.image}")`;
     turnOn_button(bi_p_1);
     turnOff_button(bi_p_2);
     turnOff_button(bi_p_3);
+    turnOff_button(bi_p_4);
     isFirst()
 })
 
@@ -166,11 +203,12 @@ bi_p_2.addEventListener('click', async () => {
 
     item_title.innerText = data.title
     item_desc.innerText = data.desc
-    item_image.style.backgroundImage = `url("${data.image}")`;
+    //item_image.style.backgroundImage = `url("${data.image}")`;
 
     turnOff_button(bi_p_1);
     turnOn_button(bi_p_2);
     turnOff_button(bi_p_3);
+    turnOff_button(bi_p_4);
 
     isFirst()
 })
@@ -181,11 +219,26 @@ bi_p_3.addEventListener('click', async () => {
 
     item_title.innerText = data.title
     item_desc.innerText = data.desc
-    item_image.style.backgroundImage = `url("${data.image}")`;
+    //item_image.style.backgroundImage = `url("${data.image}")`;
 
     turnOff_button(bi_p_1);
     turnOff_button(bi_p_2);
     turnOn_button(bi_p_3);
+    turnOff_button(bi_p_4);
+    isFirst()
+})
+bi_p_4.addEventListener('click', async () => {
+    let data = jsonData.project[3];
+    
+
+    item_title.innerText = data.title
+    item_desc.innerText = data.desc
+    //item_image.style.backgroundImage = `url("${data.image}")`;
+
+    turnOff_button(bi_p_1);
+    turnOff_button(bi_p_2);
+    turnOff_button(bi_p_3);
+    turnOn_button(bi_p_4);
     isFirst()
 })
 
@@ -195,7 +248,7 @@ bi_s_1.addEventListener('click', async () => {
 
     item_title.innerText = data.title
     item_desc.innerText = data.desc
-    item_image.style.backgroundImage = `url("${data.image}")`;
+    //item_image.style.backgroundImage = `url("${data.image}")`;
     //item_image.setAttribute('src', data.image)
 
     turnOn_button(bi_s_1);
@@ -211,7 +264,7 @@ bi_s_2.addEventListener('click', async () => {
 
     item_title.innerText = data.title
     item_desc.innerText = data.desc
-    item_image.style.backgroundImage = `url("${data.image}")`;
+    //item_image.style.backgroundImage = `url("${data.image}")`;
     
 
     turnOff_button(bi_s_1);
@@ -226,7 +279,7 @@ bi_s_3.addEventListener('click', async () => {
 
     item_title.innerText = data.title
     item_desc.innerText = data.desc
-    item_image.style.backgroundImage = `url("${data.image}")`;
+    //item_image.style.backgroundImage = `url("${data.image}")`;
 
     turnOff_button(bi_s_1);
     turnOff_button(bi_s_2);
@@ -240,7 +293,7 @@ bi_s_4.addEventListener('click', async () => {
 
     item_title.innerText = data.title
     item_desc.innerText = data.desc
-    item_image.style.backgroundImage = `url("${data.image}")`;
+    //item_image.style.backgroundImage = `url("${data.image}")`;
 
     turnOff_button(bi_s_1);
     turnOff_button(bi_s_2);
@@ -275,10 +328,10 @@ project.addEventListener("animationend", () => {
 const jsonData = {
     education: [
         {
-            title: "education 1",
+            title: "NSCC",
             date: "2022 - 2023",
             image: "../img/decoration_2.png",
-            desc: "beep bop cotton eye joe!"
+            desc: "I began my studies at NSCC in 2021. Although i didn't plan on going to college for web programming, i've come to love it."
         },
         {
             title: "experience 2",
@@ -297,26 +350,26 @@ const jsonData = {
         {
             title: "Languages",
             date: "2022 - 2023",
-            image: "../img/skills_unity.png",
-            desc: "I started out scripting in LUA on roblox and then eventually moved on to C# on unity before i eventually attended NSCC and learned Javascript, PHP, and Java."
+            image: "img/skills_unity.png",
+            desc: "I began my programming journey with LUA, a scripting language commonly used in game development on the Roblox platform. After that, I transitioned to using C# with Unity, which allowed me to develop my game development skills. Later on, I attended NSCC where I expanded my knowledge by learning several important programming languages, including JavaScript, PHP, and Java."
         },
         {
             title: "React",
             date: "2022 - 2023",
             image: "../img/skills_wordpress.png",
-            desc: "I have built 1 complete react application with another in-progress."
+            desc: "I have experience building websites using React. I've built one website from scratch and worked on another fully functioning website. I'm proficient in using React components, managing state, and leveraging third-party libraries and frameworks. With my React skills, I am confident in my ability to create high-quality and scalable websites."
         },
         {
             title: "Wordpress",
             date: "2022 - 2023",
             image: "../img/skills_wordpress.png",
-            desc: "I have helped friends and family manage their wordpress websites. an example is bobatea which I administer."
+            desc: "I have experience administering WordPress websites, including Bobatea. I'm proficient in updating content, managing website themes, and troubleshooting common issues. With my experience, I am confident in my ability to effectively manage and maintain WordPress websites."
         },
         {
             title: "Programs",
             date: "2022 - 2023",
-            image: "../img/skills_unity.png",
-            desc: "I have years of experience with Unity, blender, and gimp. I also have limited knowledge on photoshop and Illustrator"
+            image: "img/skills_unity.png",
+            desc: "I have extensive experience using Unity, Blender, and GIMP. These tools have allowed me to develop my skills in 3D modeling, game development, and graphic design. I also have some knowledge of Photoshop and Illustrator, although my experience with these programs is more limited. With my skills in Unity, Blender, and GIMP, I am confident in my ability to create visually appealing and engaging digital content."
         }
     ],
     project: [
@@ -337,6 +390,12 @@ const jsonData = {
             date: "2022 - 2023",
             image: "../img/project_notepad.png",
             desc: "This portfolio! I created this portfolio in less than 24 hours! Pretty impressive eh?"
+        },
+        {
+            title: "Lendahand",
+            date: "2023 - 2023",
+            image: "../img/project_notepad.png",
+            desc: "Lendahand is a website my team and i built while we were studying at NSCC. It's a commuity-focused website where users can request/give community members a hand."
         }
     ]
 }

@@ -57,6 +57,17 @@
     cursor: pointer;
 }
 
+#education_nav_list {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+#education_nav_list p {
+    font-size: 1.3em;
+
+    cursor: pointer;
+}
+
 #project h2 {
     font-size: 4em;
     text-align: center;
