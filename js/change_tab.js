@@ -29,23 +29,23 @@ let project_nav_list = document.getElementById('project_nav_list');
 let skills_nav_list = document.getElementById('skills_nav_list');
 
 let tab_education = document.getElementById('education');
-let tab_project = document.getElementById('project');
+let tab_content = document.getElementById('content');
 let tab_skills = document.getElementById('skills');
 
 // const data = require('../data.json')
 
-let project = document.getElementById('project');
+let content = document.getElementById('content');
 
 let currentTab = "education";
 
 button_education.addEventListener('click', async () => {
 
     // turnOn_tab(tab_education);
-    // turnOff_tab(tab_project);
+    // turnOff_tab(tab_content);
 
 
-    turnOn_tab(tab_project);
-    turnOff_tab(tab_education);
+    turnOn_tab(tab_content);
+    //turnOff_tab(tab_education);
 
     //turnOff_tab(tab_skills);
     console.log("gaaa")
@@ -67,7 +67,7 @@ button_education.addEventListener('click', async () => {
     item_desc.innerText = data.desc
     //item_image.style.backgroundImage = `url("${data.image}")`;
 
-    tab_education.scrollIntoView({
+    tab_content.scrollIntoView({
         block: 'end',
         behavior: 'smooth',
         inline: 'center'
@@ -76,15 +76,15 @@ button_education.addEventListener('click', async () => {
 
 button_projects.addEventListener('click', async () => {
 
-    turnOn_tab(tab_project);
-    turnOff_tab(tab_education);
+    turnOn_tab(tab_content);
+    //turnOff_tab(tab_education);
     //turnOff_tab(tab_skills);
 
     turnOn_button(button_projects);
     turnOff_button(button_education);
     turnOff_button(button_skills);
 
-    currentTab = "project";console.log("s")
+    currentTab = "content";console.log("s")
 
     turnOn_tab(project_nav_list);
     turnOff_tab(skills_nav_list);
@@ -103,7 +103,7 @@ button_projects.addEventListener('click', async () => {
     turnOff_button(bi_p_4);
     isFirst()
 
-    tab_project.scrollIntoView({
+    tab_content.scrollIntoView({
         block: 'end',
         behavior: 'smooth',
         inline: 'center'
@@ -112,8 +112,8 @@ button_projects.addEventListener('click', async () => {
 })
 
 button_skills.addEventListener('click', async () => {
-    turnOn_tab(tab_project);
-    turnOff_tab(tab_education);
+    turnOn_tab(tab_content);
+    //turnOff_tab(tab_education);
     //turnOff_tab(tab_skills);
 
     turnOn_button(button_skills);
@@ -141,7 +141,7 @@ button_skills.addEventListener('click', async () => {
 
     isFirst()
 
-    tab_project.scrollIntoView({
+    tab_content.scrollIntoView({
         block: 'end',
         behavior: 'smooth',
         inline: 'center'
@@ -306,20 +306,20 @@ bi_s_4.addEventListener('click', async () => {
 
 
 function isFirst(){
-    if(project.classList.contains("item_display_initial")){
+    if(content.classList.contains("item_display_initial")){
 
-        project.removeAttribute('class', 'item_display_initial')
+        content.removeAttribute('class', 'item_display_initial')
 
-        project.setAttribute('class', 'item_display_first_reload')
+        content.setAttribute('class', 'item_display_first_reload')
     } else {
-        project.setAttribute('class', 'item_display_reload')
+        content.setAttribute('class', 'item_display_reload')
     }
 }
 
 
-project.addEventListener("animationend", () => {
+content.addEventListener("animationend", () => {
     //project_display.removeAttribute('class', 'project_display_reload')
-    project.classList.remove("item_display_reload");
+    content.classList.remove("item_display_reload");
 });
 
 

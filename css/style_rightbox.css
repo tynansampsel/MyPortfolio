@@ -10,13 +10,13 @@
     background-color: #363e40;
 }
 
-#project_top_list h2 {
+#content_top_list h2 {
     color: #31393b;
 }
-#project_top_list h4 {
+#content_top_list h4 {
     color: #484E4F;
 }
-#project_top_list p {
+#content_top_list p {
     color: #b5bab2;
 }
 
@@ -31,11 +31,11 @@
     color: #686e6f;
 }
 
-#project_top_list p:hover {
+#content_top_list p:hover {
     color: #d5d9d2;
 }
 
-#project #item_image {
+#content #item_image {
     background-color: rgb(46, 53, 53);
     background-color: rgb(46, 53, 53);
     /* background-image: url("../img/me2.jpg"); */

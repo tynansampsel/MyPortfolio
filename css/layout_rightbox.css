@@ -16,19 +16,19 @@
     animation-duration: 0.5s;
 }
 
-#project {
+#content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
 
     height: 100%;
 }
-#project #project_top_list {
+#content #content_top_list {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#project #project_bottom_list {
+#content #content_bottom_list {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,12 +68,12 @@
     cursor: pointer;
 }
 
-#project h2 {
+#content h2 {
     font-size: 4em;
     text-align: center;
     margin-bottom: 20px;
 }
-#project h4 {
+#content h4 {
     font-size: 2em;
     margin-top: 0px;
     text-align: center;
@@ -90,10 +90,10 @@
     width: 100%;
 }
 
-#project_bottom_list p {
+#content_bottom_list p {
     text-align: center;
     
-    font-size: 2em;
+    font-size: 2.8vh;
     padding-left: 20%;
     padding-right: 20%;
 
