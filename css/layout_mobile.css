@@ -21,7 +21,8 @@
     #nav_list {
         position: fixed;
         width: 100vw;
-        padding-bottom: 15%;
+        /* padding-bottom: 15%; */
+        padding-bottom: 0%;
     }
 
     #left_box_list {
