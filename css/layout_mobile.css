@@ -60,4 +60,10 @@
     #p_item_image {
         display: none;
     }
+
+    #education_nav_list p, #project_nav_list p, #skills_nav_list p {
+        font-size: 3.5vw;
+
+
+    }
 }
