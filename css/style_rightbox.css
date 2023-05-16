@@ -9,6 +9,9 @@
 #project_nav_list, #skills_nav_list, #education_nav_list {
     background-color: #363e40;
 }
+#n_nav_list {
+    background-color: #363e40;
+}
 
 #content_top_list h2 {
     color: #31393b;

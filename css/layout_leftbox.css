@@ -80,6 +80,7 @@
 
 #false_nav_list {
     visibility: hidden;
+    display: none;
 }
 
 #nav_list {

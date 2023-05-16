@@ -1,0 +1,19 @@
+.card {
+    /* background-image: url("../img/skills_unity.png"); */
+    border-radius: 25px;
+    box-shadow: 0px 5px 15px rgb(0, 0, 0, 0.25);
+    background-color: #bbc3c6;
+}
+
+.card_text, .card_more, .card_dots {
+    background-color: #e6ebed;
+    color: #31393b;
+    /* border: 2px solid rgb(154, 164, 167); */
+    border-radius: 0px 0px 25px 25px;
+}
+.card_title {
+    background-color: #e6ebed;
+    color: #566063;
+    font-size: 1.2em;
+    font-weight: bold;
+}

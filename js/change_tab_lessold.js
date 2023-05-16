@@ -1,175 +1,103 @@
+let button_education = document.getElementById('button_education');
+let button_skills = document.getElementById('button_skills');
+let button_projects = document.getElementById('button_projects');
+
 let item_title = document.getElementById('p_item_title');
 let item_date = document.getElementById('p_item_date');
 let item_image = document.getElementById('p_item_image');
 let item_desc = document.getElementById('p_item_desc');
 
 
-let tab_projects = document.getElementById('tab_projects');
-let tab_tools = document.getElementById('tab_tools');
-let tab_languages = document.getElementById('tab_languages');
-let tab_education = document.getElementById('tab_education');
+let button_education_1 = document.getElementById('button_education_1');
+let button_education_2 = document.getElementById('button_education_2');
+let button_education_3 = document.getElementById('button_education_3');
 
-let nav_list = document.getElementById('n_nav_list');
-let card_container = document.getElementById('card_container');
-let current_card;
-let content = document.getElementById('content');
-let currentTab = "education";
+let bi_e_1 = document.getElementById('bi_e_1');
+
+let bi_p_1 = document.getElementById('bi_p_1');
+let bi_p_2 = document.getElementById('bi_p_2');
+let bi_p_3 = document.getElementById('bi_p_3');
+let bi_p_4 = document.getElementById('bi_p_4');
+
+let bi_s_1 = document.getElementById('bi_s_1');
+let bi_s_2 = document.getElementById('bi_s_2');
+let bi_s_3 = document.getElementById('bi_s_3');
+let bi_s_4 = document.getElementById('bi_s_4');
+
+let education_nav_list = document.getElementById('education_nav_list');
+let project_nav_list = document.getElementById('project_nav_list');
+let skills_nav_list = document.getElementById('skills_nav_list');
+
+let tab_education = document.getElementById('education');
 let tab_content = document.getElementById('content');
+let tab_skills = document.getElementById('skills');
+let card_container = document.getElementById('card_container');
 
+let current_card;
+// const data = require('../data.json')
 
+let content = document.getElementById('content');
 
+let currentTab = "education";
 
+button_education.addEventListener('click', async () => {
 
-tab_projects.addEventListener('click', async () => {
+    let card = document.createElement("div");
+    let title = document.createElement("h6");
+    let text = document.createElement("p");
+    card.setAttribute('class', 'card')
+    title.setAttribute('class', 'card_title')
+    text.setAttribute('class', 'card_text')
+    card.appendChild(title);
+    card.appendChild(text);
 
-    setButtons(tab_projects)
-    isFirst()
-
-    createCards(jsonData3.projects);
-    tab_content.scrollIntoView({
-        block: 'end',
-        behavior: 'smooth',
-        inline: 'center'
+    card.addEventListener('click', async () => {
+        
+        cardClick(event.target)
+        
     })
-})
-
-tab_tools.addEventListener('click', async () => {
-    setButtons(tab_tools)
-    isFirst()
-
-    createCards(jsonData3.tools);
-    tab_content.scrollIntoView({
-        block: 'end',
-        behavior: 'smooth',
-        inline: 'center'
-    })
-})
-
-tab_education.addEventListener('click', async () => {
-    setButtons(tab_education)
-    isFirst()
-
-    createCards(jsonData3.education);
-    tab_content.scrollIntoView({
-        block: 'end',
-        behavior: 'smooth',
-        inline: 'center'
-    })
-})
-
-tab_languages.addEventListener('click', async () => {
-    setButtons(tab_languages)
-    isFirst()
-
-    createCards(jsonData3.Languages);
-    tab_content.scrollIntoView({
-        block: 'end',
-        behavior: 'smooth',
-        inline: 'center'
-    })
-})
-
-function setButtons(activeButton) {
-    turnOff_button(tab_projects);
-    turnOff_button(tab_tools);
-    turnOff_button(tab_languages);
-    turnOff_button(tab_education);
-
-    turnOn_button(activeButton);
-}
-
-
-
-function createCards(arrayOfData) {
-    card_container.innerHTML = '';
-
-
-    arrayOfData.forEach(obj => {
-        let card = document.createElement("div");
-        let title = document.createElement("h6");
-        let text = document.createElement("p");
-        let more = document.createElement("span");
-        let dots = document.createElement("span");
-        card.setAttribute('class', 'card')
-        title.setAttribute('class', 'card_title')
-        text.setAttribute('class', 'card_text')
-        more.setAttribute('class', 'card_more')
-        dots.setAttribute('class', 'card_dots')
-
-        card.style.backgroundImage = `url("${obj.image}")`;
-        title.innerText = obj.title;
-        text.innerText = obj.text;
-        more.innerText = obj.more;
-        dots.innerText = '...';
-
-        card.appendChild(title);
-        card.appendChild(text);
-        text.appendChild(dots);
-        text.appendChild(more);
-
-        card.addEventListener('click', async () => {
-
-            cardClick(event.target)
-
-        })
-        card.addEventListener("animationend", () => {
-            //project_display.removeAttribute('class', 'project_display_reload')
-            if (event.animationName == "card_grow") {
-                event.target.scrollIntoView({
-                    block: 'end',
-                    behavior: 'smooth',
-                    inline: 'center'
-                })
-            } else if (event.animationName == "card_shrink") {
-                console.log("shrink")
-                event.target.setAttribute('class', 'card')
-            }
-
-        });
-        text.addEventListener("animationend", () => {
-            //project_display.removeAttribute('class', 'project_display_reload')
-            let p = event.target.parentElement;
-            console.log(p)
-            if (event.animationName == "card_text_rise") {
-                
-                event.target.scrollIntoView({
-                    block: 'start',
-                    behavior: 'smooth',
-                    inline: 'start'
-                })
-            } else if (event.animationName == "card_text_fall") {
-                console.log("shrink")
-                p.setAttribute('class', 'card')
-            }
-
-        });
-        card_container.appendChild(card);
+    card.addEventListener("animationend", () => {
+        //project_display.removeAttribute('class', 'project_display_reload')
+        if(event.animationName = "card_grow"){
+            event.target.scrollIntoView({
+                block: 'end',
+                behavior: 'smooth',
+                inline: 'center'
+            })
+        } else if (event.animationName = "card_shrink"){
+            console.log("shrink")
+            event.target.setAttribute('class', 'card')
+        }
+        
     });
 
+    title.innerText = "NSCC - It web Programming";
+    text.innerText = "I began my programming";
 
+    card_container.appendChild(card);
 
+    tab_content.scrollIntoView({
+        block: 'end',
+        behavior: 'smooth',
+        inline: 'center'
+    })
+})
 
-
-    
-
-
-}
-
-function turnOff_tab(element) {
+function turnOff_tab(element){
     element.removeAttribute('class', 'tab_active')
     element.setAttribute('class', 'tab_inactive')
 }
 
-function turnOn_tab(element) {
+function turnOn_tab(element){
     element.removeAttribute('class', 'tab_inactive')
     element.setAttribute('class', 'tab_active')
 }
 
-function turnOff_button(element) {
+function turnOff_button(element){
     element.removeAttribute('class', 'active')
     element.setAttribute('class', 'inactive')
 }
-function turnOn_button(element) {
+function turnOn_button(element){
     element.removeAttribute('class', 'inactive')
     element.setAttribute('class', 'active')
 }
@@ -177,9 +105,9 @@ function turnOn_button(element) {
 
 
 
-function cardClick(e) {
+function cardClick(e){
     //If card is active, turn off
-    if (e.classList.contains("card_active")) {
+    if(e.classList.contains("card_active")){
 
 
         console.log("T")
@@ -187,13 +115,12 @@ function cardClick(e) {
         e.setAttribute('class', 'card card_inactive')
 
 
-
-        //If card is not active, turn on
+    //If card is not active, turn on
     } else {
         console.log("Te")
         e.setAttribute('class', 'card card_active')
 
-        if (current_card != null) {
+        if(current_card != null){
             current_card.setAttribute('class', 'card card_inactive')
 
         }
@@ -204,8 +131,8 @@ function cardClick(e) {
 }
 
 
-function isFirst() {
-    if (content.classList.contains("item_display_initial")) {
+function isFirst(){
+    if(content.classList.contains("item_display_initial")){
 
         content.removeAttribute('class', 'item_display_initial')
 
@@ -220,122 +147,6 @@ content.addEventListener("animationend", () => {
     //project_display.removeAttribute('class', 'project_display_reload')
     content.classList.remove("item_display_reload");
 });
-const jsonData3 = {
-    education: [
-        {
-            title: "NSCC - IT web development",
-            date: "",
-            image: "img/decoration_2.png",
-            text: "I began my studies at NSCC in 2021. ",
-            more: "Although i didn't plan on going to college for web programming, i've come to love it."
-        },
-        {
-            title: "Self-learning",
-            date: "",
-            image: "img/decoration_2.png",
-            text: "I began my studies at NSCC in 2021. ",
-            more: "Although i didn't plan on going to college for web programming, i've come to love it."
-        }
-    ],
-    tools: [
-        {
-            title: "Unity",
-            date: "",
-            image: "../img/decoration_2.png",
-            text: "I have experience in Unity game development,",
-            more: "including creating my own game, and I have a solid understanding of C# programming. My skills in Unity and C# allow me to develop engaging and innovative games with efficiency."
-        },
-        {
-            title: "Blender",
-            date: "",
-            image: "img/decoration_2.png",
-            text: "I am familiar with Blender for 3D modeling,",
-            more: " particularly in generating STL models. I strive to enhance my skills in Blender to create top-notch 3D models for diverse purposes."
-        },
-        {
-            title: "Gimp",
-            date: "",
-            image: "img/decoration_2.png",
-            text: "I am skilled in GIMP,",
-            more: " an advanced image editing software, and proficient in tasks such as retouching photos and creating visual assets for different projects."
-        },
-        {
-            title: "Photoshop",
-            date: "",
-            image: "img/decoration_2.png",
-            text: "I have basic Photoshop skills from college",
-            more: ", covering image editing and design fundamentals. I'm eager to expand my abilities in Photoshop for enhancing visuals and creating captivating designs."
-        },
-        {
-            title: "Wordpress",
-            date: "",
-            image: "img/decoration_2.png",
-            text: "I have experience administering WordPress websites",
-            more: ", including Bobatea. I'm proficient in updating content, managing website themes, and troubleshooting common issues. With my experience, I am confident in my ability to effectively manage and maintain WordPress websites."
-        }
-    ],
-    projects: [
-        {
-            title: "PlanetApp",
-            date: "",
-            image: "img/language_javascript.png",
-            text: "I began my studies at NSCC in 2021. ",
-            more: "Although i didn't plan on going to college for web programming, i've come to love it."
-        },
-        {
-            title: "Lendahand",
-            date: "",
-            image: "img/language_javascript.png",
-            text: "I began my studies at NSCC in 2021. ",
-            more: "Although i didn't plan on going to college for web programming, i've come to love it."
-        },
-        {
-            title: "Notepad App",
-            date: "",
-            image: "img/language_javascript.png",
-            text: "I began my studies at NSCC in 2021. ",
-            more: "Although i didn't plan on going to college for web programming, i've come to love it."
-        },
-        {
-            title: "Game",
-            date: "",
-            image: "img/language_javascript.png",
-            text: "I began my studies at NSCC in 2021. ",
-            more: "Although i didn't plan on going to college for web programming, i've come to love it."
-        }
-    ],
-    Languages: [
-        {
-            title: "Javascript",
-            date: "",
-            image: "img/language_javascript.png",
-            text: "I began my studies at NSCC in 2021. ",
-            more: "Although i didn't plan on going to college for web programming, i've come to love it."
-        },
-        {
-            title: "React JS",
-            date: "",
-            image: "img/language_react.png",
-            text: "I began my studies at NSCC in 2021. ",
-            more: "Although i didn't plan on going to college for web programming, i've come to love it."
-        },
-        {
-            title: "Node JS",
-            date: "",
-            image: "img/language_node.png",
-            text: "I began my studies at NSCC in 2021. ",
-            more: "Although i didn't plan on going to college for web programming, i've come to love it."
-        },
-        {
-            title: "PHP",
-            date: "",
-            image: "img/language_node.png",
-            text: "I began my studies at NSCC in 2021. ",
-            more: "Although i didn't plan on going to college for web programming, i've come to love it."
-        }
-    ]
-}
-createCards(jsonData3.projects);
 
 const jsonData2 = {
     education: [

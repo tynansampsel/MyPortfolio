@@ -62,7 +62,17 @@
     justify-content: space-evenly;
     width: 100%;
 }
+#n_nav_list {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
 #education_nav_list p {
+    font-size: 1.3em;
+
+    cursor: pointer;
+}
+#n_nav_list p {
     font-size: 1.3em;
 
     cursor: pointer;
@@ -90,7 +100,7 @@
     width: 100%;
 }
 
-#content_bottom_list p {
+/* #content_bottom_list p {
     text-align: center;
     
     font-size: 2.8vh;
@@ -98,7 +108,7 @@
     padding-right: 20%;
 
     margin-bottom: 10%;
-}
+} */
 
 
 

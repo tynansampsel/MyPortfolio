@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/reset.css"/>
     <link rel="stylesheet" href="./css/layout_leftbox.css"/>
     <link rel="stylesheet" href="./css/layout_rightbox.css"/>
+    <link rel="stylesheet" href="./css/layout_card.css"/>
     <link rel="stylesheet" href="./css/layout_desktop.css"/>
     <link rel="stylesheet" href="./css/layout_mobile.css"/>
 
@@ -15,10 +16,12 @@
     <link rel="stylesheet" href="./css/layout_desktop.css"/> -->
     <link rel="stylesheet" href="./css/style_leftbox.css"/>
     <link rel="stylesheet" href="./css/style_rightbox.css"/>
+    <link rel="stylesheet" href="./css/style_card.css"/>
     <link rel="stylesheet" href="./css/style_buttons.css"/>
 
 
     <link rel="stylesheet" href="./css/item_animations.css"/>
+    <link rel="stylesheet" href="./css/scrollbar.css"/>
     <title>Tynan Sampsel</title>
 
     <style>
@@ -70,11 +73,11 @@
 
         <div id="false_nav_list"></div>
 
-        <div id="nav_list">
+        <!-- <div id="nav_list">
             <p class="active" id="button_education">Education</p>
             <p class="inactive" id="button_skills">Skills</p>
             <p class="inactive" id="button_projects">Projects</p>
-        </div>
+        </div> -->
     </section>
 
 
@@ -92,31 +95,27 @@
         <section id="content" class="item_display_initial tab_active">
             <div id="content_top_list">
 
-                <div id="education_nav_list" class="tab_active">
-                    <p class="active" id="bi_e_1">Education</p>
+                <div id="n_nav_list" class="tab_active">
+                    <p class="active" id="tab_projects">Projects</p>
+                    <p class="inactive" id="tab_tools">Tools</p>
+                    <p class="inactive" id="tab_languages">Languages</p>
+                    <p class="inactive" id="tab_education">Education</p>
                 </div>
-
-                <div id="project_nav_list" class="tab_inactive">
-                    <p class="active" id="bi_p_1">Notepad App</p>
-                    <p class="inactive" id="bi_p_2">Fullstack App</p>
-                    <p class="inactive" id="bi_p_3">Portfolio</p>
-                    <p class="inactive" id="bi_p_4">Lendahand</p>
-                </div>
-
-                <div id="skills_nav_list" class="tab_inactive">
-                    <p class="active" id="bi_s_1">Languages</p>
-                    <p class="inactive" id="bi_s_2">React</p>
-                    <p class="inactive" id="bi_s_3">Wordpress</p>
-                    <p class="inactive" id="bi_s_4">Programs</p>
-                </div>
-
-                <h2 id="p_item_title">NSCC</h2>
-                <h4 id="p_item_date">2022 - 2023</h4>
+                <!-- <h2 id="p_item_title">NSCC</h2>
+                <h4 id="p_item_date">2022 - 2023</h4> -->
             </div>
+
             
+
             <!-- <div id="p_item_image"></div> -->
             <div id="content_bottom_list">
-                <p id="p_item_desc">I began my studies at NSCC in 2021. Although i didn't plan on going to college for web programming, i've come to love it.</p>
+                <div id="card_container">
+                    <div class="card">
+                        <h6 class="card_title">NSCC - It web Programming</h6>
+                        <p class="card_text"> I began my programming </p>
+                    </div>
+                </div>
+                <!-- <p id="p_item_desc">I began my studies at NSCC in 2021. Although i didn't plan on going to college for web programming, i've come to love it.</p> -->
             </div>
             <div id="false_nav_list"></div>
         </section>

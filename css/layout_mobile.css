@@ -11,7 +11,9 @@
     }
     #right_box {
         width: 100%;
-        height: 100vh;
+        /* height: 100vh; */
+        min-height: 100vh;
+        height: auto;
         overflow-y: hidden;
     }
 
@@ -21,6 +23,15 @@
     #nav_list {
         position: fixed;
         width: 100vw;
+        
+        /* padding-bottom: 15%; */
+        padding-bottom: 0%;
+    }
+    #n_nav_list {
+        position: fixed;
+        width: 100vw;
+        height: 75px;
+        bottom: 0px;
         /* padding-bottom: 15%; */
         padding-bottom: 0%;
     }
@@ -49,14 +60,14 @@
     }
 
     #content_bottom_list p {
-        text-align: center;
+        /* text-align: center; */
         
         /* font-size: 1.5em; */
         font-size: 2.5vh;
-        padding-left: 10%;
-        padding-right: 10%;
+        /* padding-left: 10%;
+        padding-right: 10%; */
     
-        margin-bottom: 10%;
+        /* margin-bottom: 10%; */
     }
 
     #p_item_image {
