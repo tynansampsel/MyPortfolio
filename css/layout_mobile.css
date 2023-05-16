@@ -35,7 +35,14 @@
         /* padding-bottom: 15%; */
         padding-bottom: 0%;
     }
+    #false_n_nav_list {
+        display:block;
+        height: 50px;
+        width: 100%;
 
+        display : flex;
+        align-items : center;
+    }
     #left_box_list {
         margin-top: 10%;
     }

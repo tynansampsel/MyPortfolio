@@ -1,4 +1,13 @@
 
+
+@keyframes in_rightBoxFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 #right_box {
     animation-name: in_rightBoxFadeIn;
     animation-fill-mode: backwards;
@@ -62,8 +71,22 @@
     justify-content: space-evenly;
     width: 100%;
 }
+#false_n_nav_list {
+    display: none;
+    height: 50px;
+    width: 100%;
+}
+
+
+#false_n_nav_list_text {
+    margin: auto;
+    font-size: 1.6em;
+    text-align: center;
+}
+
 
 #n_nav_list p {
+    
     font-size: 1.1em;
 
     cursor: pointer;

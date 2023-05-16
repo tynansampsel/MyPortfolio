@@ -15,6 +15,7 @@ let current_card;
 let content = document.getElementById('content');
 let currentTab = "education";
 let tab_content = document.getElementById('content');
+let false_n_nav_list_text = document.getElementById('false_n_nav_list_text');
 
 
 
@@ -24,48 +25,48 @@ tab_projects.addEventListener('click', async () => {
 
     setButtons(tab_projects)
     isFirst()
-
+    false_n_nav_list_text.innerText = "Projects";
     createCards(jsonData3.projects);
     tab_content.scrollIntoView({
-        block: 'end',
+        block: 'start',
         behavior: 'smooth',
-        inline: 'center'
+        inline: 'start'
     })
 })
 
 tab_tools.addEventListener('click', async () => {
     setButtons(tab_tools)
     isFirst()
-
+    false_n_nav_list_text.innerText = "Tools";
     createCards(jsonData3.tools);
     tab_content.scrollIntoView({
-        block: 'end',
+        block: 'start',
         behavior: 'smooth',
-        inline: 'center'
+        inline: 'start'
     })
 })
 
 tab_education.addEventListener('click', async () => {
     setButtons(tab_education)
     isFirst()
-
+    false_n_nav_list_text.innerText = "Education";
     createCards(jsonData3.education);
     tab_content.scrollIntoView({
-        block: 'end',
+        block: 'start',
         behavior: 'smooth',
-        inline: 'center'
+        inline: 'start'
     })
 })
 
 tab_languages.addEventListener('click', async () => {
     setButtons(tab_languages)
     isFirst()
-
+    false_n_nav_list_text.innerText = "Languages";
     createCards(jsonData3.Languages);
     tab_content.scrollIntoView({
-        block: 'end',
+        block: 'start',
         behavior: 'smooth',
-        inline: 'center'
+        inline: 'start'
     })
 })
 

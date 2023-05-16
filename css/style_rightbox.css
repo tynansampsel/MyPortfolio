@@ -23,7 +23,13 @@
     color: #b5bab2;
 }
 
-
+#false_n_nav_list {
+    background-color: #363e40;
+}
+#false_n_nav_list_text {
+    color: #484f51;
+    text-shadow: 0px 0px 15px rgb(255, 255, 255, 0.1);
+}
 #p_item_title {
     color: #31393b;
 }
