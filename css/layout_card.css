@@ -68,6 +68,11 @@
     margin: 0%;
     pointer-events: none;
 }
+.card_bottom_spacer {
+    display: block;
+    height: 75px;
+    margin: 0%;
+}
 
 
 @media only screen and (max-width: 800px) {

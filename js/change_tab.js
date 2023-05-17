@@ -84,9 +84,12 @@ function setButtons(activeButton) {
 function createCards(arrayOfData) {
     card_container.innerHTML = '';
 
+    let card_bottom_spacer = document.createElement("div");
+    card_bottom_spacer.setAttribute('class', 'card_bottom_spacer')
 
     arrayOfData.forEach(obj => {
         let card = document.createElement("div");
+        
         let title = document.createElement("h6");
         let text = document.createElement("p");
         let more = document.createElement("span");
@@ -96,6 +99,7 @@ function createCards(arrayOfData) {
         text.setAttribute('class', 'card_text')
         more.setAttribute('class', 'card_more')
         dots.setAttribute('class', 'card_dots')
+        
 
         card.style.backgroundImage = `url("${obj.image}")`;
         title.innerText = obj.title;
@@ -145,6 +149,7 @@ function createCards(arrayOfData) {
 
         });
         card_container.appendChild(card);
+        card_container.appendChild(card_bottom_spacer);
     });
 
 
