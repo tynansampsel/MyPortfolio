@@ -249,7 +249,7 @@ const jsonData3 = {
             date: "",
             image: "img/tool_unity.png",
             text: "I started my love for programming when",
-            more: " I was a kid where i would dissasemble other people's code and see how everything worked. it was like a puzzle to unravel. I eventually grew from Roblox to Unity where I went on to make countless small projects with C#."
+            more: " I was a kid where I would dissasemble other people's code and see how everything worked. it was like a puzzle to unravel. I eventually grew from Roblox to Unity where I went on to make countless small projects with C#."
         }
     ],
     tools: [
@@ -311,14 +311,14 @@ const jsonData3 = {
             date: "",
             image: "img/noimage.png",
             text: "A clean and minimalist notepad",
-            more: " application i built using Electron.js. As well as the basic functionality for a notepad app, it can also remember your last unsaved session."
+            more: " application I built using Electron.js. As well as the basic functionality for a notepad app, it can also remember your last unsaved session."
         },
         {
             title: "Game",
             date: "",
             image: "img/tool_unity.png",
             text: "I began my studies at NSCC in 2021. ",
-            more: "Although i didn't plan on going to college for web programming, i've come to love it."
+            more: "Although I didn't plan on going to college for web programming, I've come to love it."
         }
     ],
     Languages: [
@@ -333,8 +333,8 @@ const jsonData3 = {
             title: "React JS",
             date: "",
             image: "img/lang_react.png",
-            text: "I started working with React js during",
-            more: " my second year at NSCC where i've come to love working with it. My dream job in the web-programming field would be working with React directly."
+            text: "I started working with ReactJs during",
+            more: " my second year at NSCC where I've come to love working with it. My dream job in the web-programming field would be working with React directly."
         },
         {
             title: "Node JS",
@@ -362,7 +362,7 @@ const jsonData3 = {
             date: "",
             image: "img/lang_php.png",
             text: "I learned PHP during my time at NSCC",
-            more: " and while i have working knowledge of it, im not the biggest fan of the language."
+            more: " and while I have working knowledge of it, im not the biggest fan of the language."
         }
     ]
 }
