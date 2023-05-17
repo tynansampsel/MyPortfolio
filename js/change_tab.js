@@ -117,9 +117,9 @@ function createCards(arrayOfData) {
             //project_display.removeAttribute('class', 'project_display_reload')
             if (event.animationName == "card_grow") {
                 event.target.scrollIntoView({
-                    block: 'end',
+                    block: 'start',
                     behavior: 'smooth',
-                    inline: 'center'
+                    inline: 'end'
                 })
             } else if (event.animationName == "card_shrink") {
                 console.log("shrink")
@@ -226,51 +226,51 @@ const jsonData3 = {
         {
             title: "NSCC - IT web development",
             date: "",
-            image: "img/decoration_2.png",
-            text: "I began my studies at NSCC in 2021. ",
-            more: "Although i didn't plan on going to college for web programming, i've come to love it."
+            image: "img/edu_nscc.png",
+            text: "I started attending NSCC in 2020 and",
+            more: " am very glad I made that choice. I originally wanted to do game design but chose web programming, and have come to love building and working on websites, and especially working with Javascript and React."
         },
         {
             title: "Self-learning",
             date: "",
-            image: "img/decoration_2.png",
-            text: "I began my studies at NSCC in 2021. ",
-            more: "Although i didn't plan on going to college for web programming, i've come to love it."
+            image: "img/tool_unity.png",
+            text: "I started my love for programming when",
+            more: " I was a kid where i would dissasemble other people's code and see how everything worked. it was like a puzzle to unravel. I eventually grew from Roblox to Unity where I went on to make countless small projects with C#."
         }
     ],
     tools: [
         {
             title: "Unity",
             date: "",
-            image: "../img/decoration_2.png",
-            text: "I have experience in Unity game development,",
+            image: "img/tool_unity.png",
+            text: "I have experience in Unity game development",
             more: "including creating my own game, and I have a solid understanding of C# programming. My skills in Unity and C# allow me to develop engaging and innovative games with efficiency."
         },
         {
             title: "Blender",
             date: "",
-            image: "img/decoration_2.png",
-            text: "I am familiar with Blender for 3D modeling,",
+            image: "img/tool_blender.png",
+            text: "I am familiar with Blender for 3D modeling",
             more: " particularly in generating STL models. I strive to enhance my skills in Blender to create top-notch 3D models for diverse purposes."
         },
         {
             title: "Gimp",
             date: "",
-            image: "img/decoration_2.png",
+            image: "img/tool_gimp.png",
             text: "I am skilled in GIMP,",
             more: " an advanced image editing software, and proficient in tasks such as retouching photos and creating visual assets for different projects."
         },
         {
             title: "Photoshop",
             date: "",
-            image: "img/decoration_2.png",
+            image: "img/tool_photoshop.png",
             text: "I have basic Photoshop skills from college",
             more: ", covering image editing and design fundamentals. I'm eager to expand my abilities in Photoshop for enhancing visuals and creating captivating designs."
         },
         {
             title: "Wordpress",
             date: "",
-            image: "img/decoration_2.png",
+            image: "img/tool_wordpress.png",
             text: "I have experience administering WordPress websites",
             more: ", including Bobatea. I'm proficient in updating content, managing website themes, and troubleshooting common issues. With my experience, I am confident in my ability to effectively manage and maintain WordPress websites."
         }
@@ -279,28 +279,28 @@ const jsonData3 = {
         {
             title: "PlanetApp",
             date: "",
-            image: "img/language_javascript.png",
-            text: "I began my studies at NSCC in 2021. ",
-            more: "Although i didn't plan on going to college for web programming, i've come to love it."
+            image: "img/noimage.png",
+            text: "A Fullstack demo application I built",
+            more: " with the MERN stack. It lists all the known planets, as well as allow the user to add, modify, or delete any of them."
         },
         {
             title: "Lendahand",
             date: "",
-            image: "img/language_javascript.png",
-            text: "I began my studies at NSCC in 2021. ",
-            more: "Although i didn't plan on going to college for web programming, i've come to love it."
+            image: "img/app_lendahand.png",
+            text: "Lendahand is a website my team and I",
+            more: " built while we were studying at NSCC. It's a community-focused website where users can request/give local community members a hand."
         },
         {
             title: "Notepad App",
             date: "",
-            image: "img/language_javascript.png",
-            text: "I began my studies at NSCC in 2021. ",
-            more: "Although i didn't plan on going to college for web programming, i've come to love it."
+            image: "img/noimage.png",
+            text: "A clean and minimalist notepad",
+            more: " application i built using Electron.js. As well as the basic functionality for a notepad app, it can also remember your last unsaved session."
         },
         {
             title: "Game",
             date: "",
-            image: "img/language_javascript.png",
+            image: "img/tool_unity.png",
             text: "I began my studies at NSCC in 2021. ",
             more: "Although i didn't plan on going to college for web programming, i've come to love it."
         }
@@ -309,182 +309,46 @@ const jsonData3 = {
         {
             title: "Javascript",
             date: "",
-            image: "img/language_javascript.png",
-            text: "I began my studies at NSCC in 2021. ",
-            more: "Although i didn't plan on going to college for web programming, i've come to love it."
+            image: "img/lang_javascript.png",
+            text: "I started working with javascript",
+            more: " during my time at NSCC where I built many applications from a bus-tracker to a fullstack application."
         },
         {
             title: "React JS",
             date: "",
-            image: "img/language_react.png",
-            text: "I began my studies at NSCC in 2021. ",
-            more: "Although i didn't plan on going to college for web programming, i've come to love it."
+            image: "img/lang_react.png",
+            text: "I started working with React js during",
+            more: " my second year at NSCC where i've come to love working with it. My dream job in the web-programming field would be working with React directly."
         },
         {
             title: "Node JS",
             date: "",
-            image: "img/language_node.png",
-            text: "I began my studies at NSCC in 2021. ",
-            more: "Although i didn't plan on going to college for web programming, i've come to love it."
+            image: "img/lang_node.png",
+            text: "I have been using Nodejs for the last 2 years",
+            more: " nearly every day and have grown very confident working with it."
+        },
+        {
+            title: "C#",
+            date: "",
+            image: "img/lang_csharp.png",
+            text: "I have grown a special love for C#",
+            more: " since my days working with unity and while I was attending NSCC I was surprised to find out its also used for web-development. Since then I've made countless games with the language and during my time at NSCC an application."
+        },
+        {
+            title: "Java",
+            date: "",
+            image: "img/lang_java.png",
+            text: "Java has come easy to me since I already",
+            more: " have some experience in C#. Although I only have a basic understanding of the language, It is easy enough to pick back up any time I've needed to use it or help someone with it."
         },
         {
             title: "PHP",
             date: "",
-            image: "img/language_node.png",
-            text: "I began my studies at NSCC in 2021. ",
-            more: "Although i didn't plan on going to college for web programming, i've come to love it."
+            image: "img/lang_php.png",
+            text: "I learned PHP during my time at NSCC",
+            more: " and while i have working knowledge of it, im not the biggest fan of the language."
         }
     ]
 }
 createCards(jsonData3.projects);
 
-const jsonData2 = {
-    education: [
-        {
-            title: "NSCC - IT web development",
-            date: "",
-            image: "../img/decoration_2.png",
-            desc: "I began my studies at NSCC in 2021. Although i didn't plan on going to college for web programming, i've come to love it."
-        },
-        {
-            title: "experience 2",
-            date: "2022 - 2023",
-            image: "../img/decoration_2.png",
-            desc: "beep bop cotton eye joe!  ee;emrf"
-        },
-        {
-            title: "education 3",
-            date: "2022 - 2023",
-            image: "../img/decoration_2.png",
-            desc: "beep bop cotton eye joe 4444!"
-        }
-    ],
-    skills: [
-        {
-            title: "Languages",
-            date: "2022 - 2023",
-            image: "img/skills_unity.png",
-            desc: "I began my programming journey with LUA, a scripting language commonly used in game development on the Roblox platform. After that, I transitioned to using C# with Unity, which allowed me to develop my game development skills. Later on, I attended NSCC where I expanded my knowledge by learning several important programming languages, including JavaScript, PHP, and Java."
-        },
-        {
-            title: "React",
-            date: "2022 - 2023",
-            image: "../img/skills_wordpress.png",
-            desc: "I have experience building websites using React. I've built one website from scratch and worked on another fully functioning website. I'm proficient in using React components, managing state, and leveraging third-party libraries and frameworks. With my React skills, I am confident in my ability to create high-quality and scalable websites."
-        },
-        {
-            title: "Wordpress",
-            date: "2022 - 2023",
-            image: "../img/skills_wordpress.png",
-            desc: "I have experience administering WordPress websites, including Bobatea. I'm proficient in updating content, managing website themes, and troubleshooting common issues. With my experience, I am confident in my ability to effectively manage and maintain WordPress websites."
-        },
-        {
-            title: "Programs",
-            date: "2022 - 2023",
-            image: "img/skills_unity.png",
-            desc: "I have extensive experience using Unity, Blender, and GIMP. These tools have allowed me to develop my skills in 3D modeling, game development, and graphic design. I also have some knowledge of Photoshop and Illustrator, although my experience with these programs is more limited. With my skills in Unity, Blender, and GIMP, I am confident in my ability to create visually appealing and engaging digital content."
-        }
-    ],
-    project: [
-        {
-            title: "Notepad",
-            date: "2022 - 2023",
-            image: "../img/project_notepad.png",
-            desc: "A clean and minimalist notepad application i built using Electron.js. As well as the basic functionality for a notepad app, it can also remember your last unsaved session."
-        },
-        {
-            title: "Fullstack App",
-            date: "2022 - 2023",
-            image: "../img/project_azure.png",
-            desc: "A Fullstack application I built with the MERN stack. It will list all the known planets, as well as allow the user to add, modify, or delete them"
-        },
-        {
-            title: "Portfolio",
-            date: "2022 - 2023",
-            image: "../img/project_notepad.png",
-            desc: "This portfolio! I created this portfolio in less than 24 hours! Pretty impressive eh?"
-        },
-        {
-            title: "Lendahand",
-            date: "2023 - 2023",
-            image: "../img/project_notepad.png",
-            desc: "Lendahand is a website my team and i built while we were studying at NSCC. It's a commuity-focused website where users can request/give community members a hand."
-        }
-    ]
-}
-
-
-const jsonData = {
-    education: [
-        {
-            title: "NSCC",
-            date: "2022 - 2023",
-            image: "../img/decoration_2.png",
-            desc: "I began my studies at NSCC in 2021. Although i didn't plan on going to college for web programming, i've come to love it."
-        },
-        {
-            title: "experience 2",
-            date: "2022 - 2023",
-            image: "../img/decoration_2.png",
-            desc: "beep bop cotton eye joe!  ee;emrf"
-        },
-        {
-            title: "education 3",
-            date: "2022 - 2023",
-            image: "../img/decoration_2.png",
-            desc: "beep bop cotton eye joe 4444!"
-        }
-    ],
-    skills: [
-        {
-            title: "Languages",
-            date: "2022 - 2023",
-            image: "img/skills_unity.png",
-            desc: "I began my programming journey with LUA, a scripting language commonly used in game development on the Roblox platform. After that, I transitioned to using C# with Unity, which allowed me to develop my game development skills. Later on, I attended NSCC where I expanded my knowledge by learning several important programming languages, including JavaScript, PHP, and Java."
-        },
-        {
-            title: "React",
-            date: "2022 - 2023",
-            image: "../img/skills_wordpress.png",
-            desc: "I have experience building websites using React. I've built one website from scratch and worked on another fully functioning website. I'm proficient in using React components, managing state, and leveraging third-party libraries and frameworks. With my React skills, I am confident in my ability to create high-quality and scalable websites."
-        },
-        {
-            title: "Wordpress",
-            date: "2022 - 2023",
-            image: "../img/skills_wordpress.png",
-            desc: "I have experience administering WordPress websites, including Bobatea. I'm proficient in updating content, managing website themes, and troubleshooting common issues. With my experience, I am confident in my ability to effectively manage and maintain WordPress websites."
-        },
-        {
-            title: "Programs",
-            date: "2022 - 2023",
-            image: "img/skills_unity.png",
-            desc: "I have extensive experience using Unity, Blender, and GIMP. These tools have allowed me to develop my skills in 3D modeling, game development, and graphic design. I also have some knowledge of Photoshop and Illustrator, although my experience with these programs is more limited. With my skills in Unity, Blender, and GIMP, I am confident in my ability to create visually appealing and engaging digital content."
-        }
-    ],
-    project: [
-        {
-            title: "Notepad",
-            date: "2022 - 2023",
-            image: "../img/project_notepad.png",
-            desc: "A clean and minimalist notepad application i built using Electron.js. As well as the basic functionality for a notepad app, it can also remember your last unsaved session."
-        },
-        {
-            title: "Fullstack App",
-            date: "2022 - 2023",
-            image: "../img/project_azure.png",
-            desc: "A Fullstack application I built with the MERN stack. It will list all the known planets, as well as allow the user to add, modify, or delete them"
-        },
-        {
-            title: "Portfolio",
-            date: "2022 - 2023",
-            image: "../img/project_notepad.png",
-            desc: "This portfolio! I created this portfolio in less than 24 hours! Pretty impressive eh?"
-        },
-        {
-            title: "Lendahand",
-            date: "2023 - 2023",
-            image: "../img/project_notepad.png",
-            desc: "Lendahand is a website my team and i built while we were studying at NSCC. It's a commuity-focused website where users can request/give community members a hand."
-        }
-    ]
-}
