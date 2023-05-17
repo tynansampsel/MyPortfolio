@@ -92,10 +92,12 @@ function createCards(arrayOfData) {
         
         let title = document.createElement("h6");
         let text = document.createElement("p");
+        let link = document.createElement("a");
         let more = document.createElement("span");
         let dots = document.createElement("span");
         card.setAttribute('class', 'card')
         title.setAttribute('class', 'card_title')
+        link.setAttribute('class', 'card_link')
         text.setAttribute('class', 'card_text')
         more.setAttribute('class', 'card_more')
         dots.setAttribute('class', 'card_dots')
@@ -106,15 +108,22 @@ function createCards(arrayOfData) {
         text.innerText = obj.text;
         more.innerText = obj.more;
         dots.innerText = '...';
+        link.innerText = obj.link_name ? obj.link_name : '';
+        link.setAttribute('href', obj.link ? obj.link : '')
+        link.setAttribute('target', '_blank')
 
         card.appendChild(title);
         card.appendChild(text);
+        title.appendChild(link);
         text.appendChild(dots);
         text.appendChild(more);
 
         card.addEventListener('click', async () => {
+            
+            if(!event.target.classList.contains("card_link")){
+                cardClick(event.target)
 
-            cardClick(event.target)
+            }
 
         })
         card.addEventListener("animationend", () => {
@@ -137,10 +146,10 @@ function createCards(arrayOfData) {
             console.log(p)
             if (event.animationName == "card_text_rise") {
                 
-                event.target.scrollIntoView({
+                event.target.parentElement.scrollIntoView({
                     block: 'start',
                     behavior: 'smooth',
-                    inline: 'start'
+                    inline: 'end'
                 })
             } else if (event.animationName == "card_text_fall") {
                 console.log("shrink")
@@ -290,6 +299,8 @@ const jsonData3 = {
         },
         {
             title: "Lendahand",
+            link_name: "lendahand.onrender.com",
+            link: "https://lendahand.onrender.com/",
             date: "",
             image: "img/app_lendahand.png",
             text: "Lendahand is a website my team and I",

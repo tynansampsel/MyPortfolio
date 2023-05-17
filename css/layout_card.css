@@ -51,11 +51,18 @@
     pointer-events: none;
     display: none;
 }
+.card_link {
+    pointer-events:all;
+    display: none;
+}
 .card_dots {
     display:inline;
     pointer-events: none;
 }
 .card_active .card_text .card_more {
+    display:inline;
+}
+.card_active .card_title .card_link {
     display:inline;
 }
 .card_active .card_text .card_dots {
@@ -65,8 +72,19 @@
     padding-top: 10px;
     padding-bottom: 0px;
     padding-left: 10px;
+    /* width: 70%; */
     margin: 0%;
     pointer-events: none;
+}
+.card_link {
+    /* font-size: 0.8em; */
+    /* padding-top: 10px; */
+    padding-bottom: 0px;
+    padding-right: 10px;
+    /* width: 30%; */
+    float: right;
+    margin: 0%;
+    /* float: left; */
 }
 .card_bottom_spacer {
     display: block;

@@ -17,3 +17,23 @@
     font-size: 1.2em;
     font-weight: bold;
 }
+.card_link {
+    font-size: 0.9em;
+    color: #788386;
+}
+.card_link:hover {
+    
+    animation-name: item-light-up;
+    animation-fill-mode: forwards;
+    animation-timing-function:ease-in-out;
+    animation-duration: 0.5s;
+}
+
+@keyframes link-light-up {
+    0% {
+
+    }
+    100% {
+        color: #d4d8d9;
+    }
+}
